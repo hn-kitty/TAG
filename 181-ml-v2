@@ -1,0 +1,171 @@
+{
+  "log": null,
+  "routing": {
+    "rules": [
+      {
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked",
+        "type": "field"
+      },
+      {
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ],
+        "type": "field"
+      }
+    ]
+  },
+  "dns": null,
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 62789,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      },
+      "streamSettings": null,
+      "tag": "api",
+      "sniffing": null
+    },
+    {
+      "listen": null,
+      "port": 443,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "c1a7ef81-72a2-4718-d2fa-4b9738f05e81",
+            "alterId": 0
+          }
+        ],
+        "disableInsecureEncryption": false
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.zjproxy.ml",
+          "certificates": [
+            {
+              "certificate": [
+                "-----BEGIN CERTIFICATE-----",
+                "MIIEoDCCA4igAwIBAgIUI1kHJrZX1ZFtHnXlgrVys1EGWtIwDQYJKoZIhvcNAQEL",
+                "BQAwgYsxCzAJBgNVBAYTAlVTMRkwFwYDVQQKExBDbG91ZEZsYXJlLCBJbmMuMTQw",
+                "MgYDVQQLEytDbG91ZEZsYXJlIE9yaWdpbiBTU0wgQ2VydGlmaWNhdGUgQXV0aG9y",
+                "aXR5MRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQIEwpDYWxpZm9ybmlh",
+                "MB4XDTIyMDMwOTAxMTgwMFoXDTM3MDMwNTAxMTgwMFowYjEZMBcGA1UEChMQQ2xv",
+                "dWRGbGFyZSwgSW5jLjEdMBsGA1UECxMUQ2xvdWRGbGFyZSBPcmlnaW4gQ0ExJjAk",
+                "BgNVBAMTHUNsb3VkRmxhcmUgT3JpZ2luIENlcnRpZmljYXRlMIIBIjANBgkqhkiG",
+                "9w0BAQEFAAOCAQ8AMIIBCgKCAQEArnlyCwjUmn6cdcmuWz5VZVFfNVkw5Xixlh+c",
+                "FsgoPPbQ+Ie4g02IYTqfz2+IjJqUH3ds412VfYGCCw79vhcY/sD7UkEgp9cZoZSp",
+                "F6rfm6PSsDsp2ZddU8EdICGDtXyc6Pyl1ta+C93QN3jUpYSEu8J+qQPHSeMtjOil",
+                "3O45nLIG2UsLChWcoh10WlWjgXgaaNkPj2TBghHOWM8PcqxOsGEhKHrH3qwRp6/b",
+                "NV5cmzat9sCjcHP5groN7njiYA6RfrE5IV7HmJ/3y3MaEx9+8KlMK3Y7rrHStjMj",
+                "56GI2AhRrHQ2Ax3R+fQ/hXOTK/iB/X7W3TaJhFvLFTSffDxtkwIDAQABo4IBIjCC",
+                "AR4wDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcD",
+                "ATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBSEZ4ENWtlSeHtfsxMRlBx5tBRJxzAf",
+                "BgNVHSMEGDAWgBQk6FNXXXw0QIep65TbuuEWePwppDBABggrBgEFBQcBAQQ0MDIw",
+                "MAYIKwYBBQUHMAGGJGh0dHA6Ly9vY3NwLmNsb3VkZmxhcmUuY29tL29yaWdpbl9j",
+                "YTAjBgNVHREEHDAaggwqLnpqcHJveHkubWyCCnpqcHJveHkubWwwOAYDVR0fBDEw",
+                "LzAtoCugKYYnaHR0cDovL2NybC5jbG91ZGZsYXJlLmNvbS9vcmlnaW5fY2EuY3Js",
+                "MA0GCSqGSIb3DQEBCwUAA4IBAQBIihTCnaq33EvSSqgHbtnbpeN8MXE9EiUel3hf",
+                "uNDgEzOQeC/NaxLQjBqECiDdfRssWfDW1R4ksY5ZpejgWFkVerbV4IIMg3yJ+nHG",
+                "LVZYw7IRELs39m2rEbeejrjvxmFNbqudrlCRAjHTFsuKmaU8vWZ4OgsNPSqqs8lK",
+                "2HfzW9tq+nfuxZ8aXdkLP2EVFCo3qlPqBZCF6u1OPdPLVlBRhONCtk7CarMfDjMj",
+                "x3TAlAH9jyX85vhZKN/P2Bt0lEQ6gROISUDO6hUjtPyl3K/tBZp53cA6FaVFGNlv",
+                "zCuc06+N3/S+vCUoYLGXX+CFN0z9cijz4PX9L/kdz/xQ0Cza",
+                "-----END CERTIFICATE-----",
+                ""
+              ],
+              "key": [
+                "-----BEGIN PRIVATE KEY-----",
+                "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCueXILCNSafpx1",
+                "ya5bPlVlUV81WTDleLGWH5wWyCg89tD4h7iDTYhhOp/Pb4iMmpQfd2zjXZV9gYIL",
+                "Dv2+Fxj+wPtSQSCn1xmhlKkXqt+bo9KwOynZl11TwR0gIYO1fJzo/KXW1r4L3dA3",
+                "eNSlhIS7wn6pA8dJ4y2M6KXc7jmcsgbZSwsKFZyiHXRaVaOBeBpo2Q+PZMGCEc5Y",
+                "zw9yrE6wYSEoesferBGnr9s1XlybNq32wKNwc/mCug3ueOJgDpF+sTkhXseYn/fL",
+                "cxoTH37wqUwrdjuusdK2MyPnoYjYCFGsdDYDHdH59D+Fc5Mr+IH9ftbdNomEW8sV",
+                "NJ98PG2TAgMBAAECggEAMmW1KffOhaPt6N4tZYDPZPlIwZ22UIp47Y7K5Q/DA70d",
+                "prR5eUADlWY8NEyYylh6Uc6K3vAw1rR6jlwxsl90ol23Gs7iMmkhJ7nL0CDU/12m",
+                "Za5pS8d7t04wbhAQPfO1VV1pP/H+qmnTk7ps3jS1rJClSofjYHXlOe8XvgX4EUkm",
+                "2EWvjaoB8FU0RB1q8brnrNGsXzrytRn0gssTSsZ6zO1vqjDxd0lUCNffJM7XI4df",
+                "VosHTqvt3BTglu1G+3c59JtBo69Yxuu7f0LE7To9S19iFON09oncLTqZ7w4ePazW",
+                "mRIFW4uw7QnY6oIYiA9D4mO4jcn/DYUOLtgC41jovQKBgQDkWibVSBYnIAZWUETN",
+                "GQvG1oIZLSbgxevhRhlYqvRriuMXMkQv/Kk6qUhoV9ACRFN27BXL58It3JgDc4Y4",
+                "xqmq4HaN9m4p6qKd6Tv3JlkwAPzXTCrSzzW84qQcr2BT/jlllzUSI/0SKpkzdmnJ",
+                "O40ck2psqzSan9NgqceAXpUvVwKBgQDDmVXbGAgGSEwUVQdkDCEzKsnI8MV5sBjJ",
+                "bDYtDj6fyfUre+Nc6XxEQHIXck+ZdCbJBLnJew9a4Rc4WL/pTbBQUvTaHvOqecbR",
+                "8vQUUCyfy+AfUjT/PmR/e0hXKp9nmyJZfkeDDarM/DVPtdNrIFCDTGbaS5zq2Vx9",
+                "YWVuNThaJQKBgQCaSS8ju+j71m9xshpKWTnTxutwB0nVZOTS+IH3nso2P0jgS142",
+                "7geJUwdROMOaRIAAQdMYSiawxfMPoeZ2RgQtKCvyDyavu5DUENorSwXHoWM0NIpa",
+                "lRZB4P/xQa1cEtDFCz0YXKiIta99Tex7wni9bfziH2sTbhlrnkrlOQKjUQKBgC2z",
+                "2US9I7rcD7K8f2KYFvXOrKFf6LRbOh9uQmZaqrVJShjj9KcUAy4rZL0nv4OaiSl1",
+                "CjgSoe7ZI0TOL+FCfsz15TJGAyc1FwidXPyWEycvSunmmm19VZwX4TpEwkRCEk+Y",
+                "2vq7KcqFr6s1T/X68fUL2AhvnHWfXiYJqNqMYuNlAoGAL38epCCyNBtvW1Ah6S3T",
+                "iGAsUs4VXbxIralKYNmwJICgxenXX6SXpRGTW+4YxsoROCZMi5IRd48VMqOi2MJa",
+                "uSJnuKKtOGYaPFZC/1QtGYUm2z39QwjBVi0cM8W5a93ntUQTOgDjBN7KGKnjggk7",
+                "82P1LnMF5g/Kz2eIdcTO72g=",
+                "-----END PRIVATE KEY-----",
+                ""
+              ]
+            }
+          ]
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "www.zjproxy.ml"
+          }
+        }
+      },
+      "tag": "inbound-443",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
+    }
+  ],
+  "transport": null,
+  "policy": {
+    "system": {
+      "statsInboundDownlink": true,
+      "statsInboundUplink": true
+    }
+  },
+  "api": {
+    "services": [
+      "HandlerService",
+      "LoggerService",
+      "StatsService"
+    ],
+    "tag": "api"
+  },
+  "stats": {},
+  "reverse": null,
+  "fakeDns": null
+}
