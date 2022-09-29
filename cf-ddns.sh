@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # CHANGE THESE
-auth_email="@163.com"
-auth_key=""
+auth_email="hnyjzengjing@163.com"
+auth_key="25cf769eec646f21463df8970da77838fd469"
 # found in cloudflare account settings
 zone_name="zjproxy.ga"
 record_name="www.zjproxy.ga"
